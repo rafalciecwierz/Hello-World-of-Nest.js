@@ -4,9 +4,10 @@ import { ItemsModule } from './items/items.module';
 
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import config from './config/keys';
 
 @Module({
-  imports: [ItemsModule, MongooseModule.forRoot('mongodb://localhost/nest')],
+  imports: [ItemsModule, MongooseModule.forRoot(config.mongoURI)],
   controllers: [AppController],
   providers: [AppService],
 })
