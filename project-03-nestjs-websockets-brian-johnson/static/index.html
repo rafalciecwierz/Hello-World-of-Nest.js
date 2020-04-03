@@ -24,8 +24,37 @@
           <input type="text" v-model="text" />
           <button type="submit" @click.prevent="sendChatMessage()">Send</button>
         </form>
+        <div class="tab-row">
+          <button
+            class="tab-btn"
+            :class="{ active: activeRoom == 'general' }"
+            @click="activeRoom = 'general'"
+          >
+            General
+          </button>
+          <button
+            class="tab-btn"
+            :class="{ active: activeRoom == 'typeScript' }"
+            @click="activeRoom = 'typeScript'"
+          >
+            typeScript
+          </button>
+          <button
+            class="tab-btn"
+            :class="{ active: activeRoom == 'nestJS' }"
+            @click="activeRoom = 'nestJS'"
+          >
+            NestJS
+          </button>
+        </div>
+        <div class="tab-row">
+          Status: {{ isMemberOfActiveRoom ? 'joined' : 'Not joined'}}
+          <button @click="toggleRoomMembership()">
+            {{ isMemberOfActiveRoom ? 'joined' : 'Not joined'}}
+          </button>
+        </div>
         <ul>
-          <li v-for="msg of messages">
+          <li v-for="msg of messages[activeRoom]">
             <strong>{{ msg.sender }}:</strong> {{ msg.message }}
           </li>
         </ul>
@@ -40,9 +69,19 @@
         username: '',
         title: `Websocket server`,
         text: '',
-        messages: [],
+        messages: {
+          general: [],
+          typeScript: [],
+          nestJS: [],
+        },
+        rooms: {
+          general: false,
+          typeScript: false,
+          nestJS: false,
+        },
         socket: { chat: null, alert: null },
         alerts: [],
+        activeRoom: 'general',
       },
       methods: {
         sendChatMessage() {
@@ -57,6 +96,11 @@
         },
         recieveAlertMsg(msg) {
           this.alerts.push(msg);
+        },
+      },
+      computed: {
+        isMemberOfActiveRoom() {
+          return this.rooms[this.activeRoom];
         },
       },
       created() {
