@@ -24,3 +24,14 @@ NestJS Crash Course by [Traversy Media](https://youtu.be/wqhNoDE6pb4) - Brad Tra
 Rest API - local storage + mongo DB
 
 This course has same length as the first one. It explains how to create simple REST API with CRUD operations in local storage and mongoDB. At first glance we might think that it gives you more content, and yes in some way it's true, but in my personal opinion Max explained the foundations bit more deeply. Even tho I reccomend to take this tutorial - it was fun, quick and smooth and Brad is wonderful teacher as well!
+
+## Project 03
+
+NestJS WebSockets by [Brian Johnson](https://youtu.be/0zyYhm5MjJ4).
+
+Websocket - chat app, configuration, static files, namespaces, rooms.
+
+At this point it was hard to find any complex material about websocket in Nest.js.
+I've chosen this one because it covers namespaces and rooms. It's really hard to compare it to Brads or Maxs tutorials because it was the first tutorial at Brians channel.
+Nevertheless this tutorial is great! I've earnt a lot of new knowledge.
+If you like to start your journey with websockets in nest.js you should give this tutorial a chance!
