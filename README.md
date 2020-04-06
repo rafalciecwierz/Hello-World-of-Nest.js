@@ -35,3 +35,7 @@ At this point it was hard to find any complex material about websocket in Nest.j
 I've chosen this one because it covers namespaces and rooms. It's really hard to compare it to Brads or Maxs tutorials because it was the first tutorial at Brians channel.
 Nevertheless this tutorial is great! I've earnt a lot of new knowledge.
 If you like to start your journey with websockets in nest.js you should give this tutorial a chance!
+
+## Project 04
+
+Ideas App - NestJS API by [Kelvin Mai](https://youtu.be/NF9Xn4g5MJY)
