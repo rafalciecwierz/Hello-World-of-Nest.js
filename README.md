@@ -41,3 +41,14 @@ If you like to start your journey with websockets in nest.js you should give thi
 Ideas App - NestJS API by [Kelvin Mai](https://youtu.be/NF9Xn4g5MJY)
 
 You need to add .ormconfig.json to your repo.
+
+
+## Project 05
+
+Simple task manager
+
+## Project 06
+
+NestJS Course by [JavaScript Mastery](https://www.youtube.com/watch?v=Q6NpiIp-6WM) - Adrian Hajdin.
+
+
